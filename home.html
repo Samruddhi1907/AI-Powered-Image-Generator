@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Welcome</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-image: url("Images/welcome_bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        body::before {
+            content: none;
+        }
+        .welcome-line {
+            font-size: 6em;
+            font-weight: normal;
+            font-family: 'Great Vibes', cursive;
+            color: #40c4ff;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-80px);
+            animation: fadeInDown 1s forwards 0.3s, flicker 2s linear infinite;
+        }
+        @keyframes fadeInDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes flicker {
+            0% { opacity: 0.8; }
+            2% { opacity: 1; }
+            4% { opacity: 0.7; }
+            6% { opacity: 1; }
+            8% { opacity: 0.9; }
+            10% { opacity: 1; }
+            12% { opacity: 0.8; }
+            14% { opacity: 1; }
+            16% { opacity: 0.9; }
+            18% { opacity: 1; }
+            20% { opacity: 0.7; }
+            100% {opacity: 1;}
+        }
+        .container {
+            text-align: center;
+            padding: 0;
+            max-width: 900px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.5s;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            animation: colorChange 5s linear infinite alternate, glow 3s ease-in-out infinite alternate;
+        }
+        @keyframes colorChange {
+            0% { color: #A78BFA; }
+            50% { color: #60A5FA; }
+            100% { color: #34D399; }
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #A78BFA;}
+            100% {text-shadow: 0 0 30px #A78BFA;}
+        }
+        .highlight {
+            color: #A78BFA;
+        }
+        p {
+            font-size: 1.4em;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: #CBD5E1;
+        }
+        button {
+            background-color: #A78BFA;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.25em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: subtleScale 4s ease-in-out infinite alternate;
+        }
+        @keyframes subtleScale {
+            0% { transform: scale(1) translateY(0); }
+            50% { transform: scale(1.03) translateY(-3px); }
+            100% { transform: scale(1) translateY(0); }
+        }
+        button:hover {
+            background-color: #9370DB;
+            transform: translateY(-2px) scale(1.05); 
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            p { font-size: 1em; }
+            button { font-size: 1em; padding: 12px 24px; }
+            .container {padding: 20px;}
+        }
+        footer {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: padding 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        footer a:hover {
+            color: #A78BFA;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter&family=Bebas+Neue&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-line">Welcome!</div>
+    <div class="container">
+        <h1>Unleash Your <span class="highlight">Creative Vision ✨</span></h1>
+        <p>Experience the magic of AI-powered art. Our image generator transforms your ideas into stunning visuals. Create <span class="highlight">unique and captivating</span> images with the power of artificial intelligence. Generate images <span class="highlight">in seconds</span>.</p>
+        <button onclick="redirectToNextPage()">Start Generating</button>
+    </div>
+    <script>
+        function redirectToNextPage() {
+            window.location.href = "main.html";
+        }
+    </script>
+    <footer>
+        <a href="index.html">Home</a>
+    </footer>
+</body>
+</html>

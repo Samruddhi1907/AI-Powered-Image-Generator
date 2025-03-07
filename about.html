@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AI Image Generator</title>
+    <style>
+        body {
+            background-image: url("Images/about_bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .about-container {
+            text-align: center;
+        }
+        .about-container h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        .about-container h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #e8e8e8;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        .about-container p {
+            font-size: 1.2rem;
+            color: #f2f2f2;
+            line-height: 1.6;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        .about-container section {
+            margin-bottom: 20px;
+        }
+        .about-container ul {
+            font-size: 1.2rem;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .about-container li {
+            margin-bottom: 5px;
+            color: #f2f2f2;
+        }
+        .about-container a {
+            color: #edd627ef;
+            text-decoration: none;
+        }
+        .about-container a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: padding 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        footer a:hover {
+            color: #A78BFA;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h1>About AI Image Generator</h1>
+
+        <section class="overview">
+            <h2>Project Overview</h2>
+            <p>This project is an AI-powered image generator that allows users to create unique and captivating visuals from text prompts. By leveraging the power of artificial intelligence, our application transforms your ideas into stunning images in just seconds.</p>
+        </section>
+
+        <section class="technology">
+            <h2>Technology Used</h2>
+            <ul>
+                <li><strong>Image Generation:</strong> The project uses the <a href="https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0" target="_blank">Stable Diffusion XL Base 1.0</a> model from Hugging Face through their API. This model is a powerful text-to-image AI capable of generating high-quality images.</li>
+                <li><strong>Frontend Development:</strong> The user interface is built using HTML, CSS, and JavaScript.</li>
+                <li><strong>Image Editing:</strong> Basic image editing features are implemented using the HTML5 Canvas API.</li>
+            </ul>
+        </section>
+
+        <section class="developer">
+            <h2>Developer</h2>
+            <p>This project was developed by Ms.Samruddhi Sanap as an academic project.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>For any inquiries, please contact us at: abc1234@gmail.com  </p>
+        </section>
+    </div>
+    <footer>
+        <a href="index.html">Home</a>
+    </footer>
+</body>
+
+</html>
