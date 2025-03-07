@@ -10,14 +10,11 @@
     <body>
         <section class="image-generator">
             <div class="content">
-                <h1>AI-Based Image Generator</h1>
+                <h1>Image Generator</h1>
                 <p>Unleash your imagination. Describe your vision in words, and watch our AI bring it to life in stunning visuals.</p>
                 <form action="#" class="generate-form">
                     <input type="text" class="prompt-input" placeholder="Let your imagination run wild! Describe your vision...">
                     <div class="controls">
-                        <select class="img-quantity">
-                            <option value="1" selected>Image</option>
-                        </select>
                         <button type="submit" class="generate-btn">Generate</button>
                     </div>
                 </form>
@@ -43,5 +40,19 @@
                 <img src="Images/ex6.jpg" alt="image">
             </div>
         </section>
+        <div class="action-buttons">
+            <button class="edit-btn" disabled>Edit</button>
+        </div>
+        <div class="feedback-overlay" style="display: none;"> 
+            <div class="feedback-box">
+                <h2>Feedback</h2>
+                <p>We'd love to hear your thoughts on your image generation experience!</p>
+                <button class="feedback-btn">Provide Feedback</button>
+                <button class="close-button">Close</button>
+            </div>
+        </div>
+        <footer>
+            <a href="index.html">Home</a>
+        </footer>
     </body>
 </html>
